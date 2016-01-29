@@ -19,3 +19,9 @@ The main diference is that cnn_shallow.py and cnn_deep.py contain code to read a
 train/test sets from regular image files, and therefore can be more easily deployed to other databases (which,
 ultimately, is the goal of the user). Notice that the folders MNIST and CIFAR10 are organized
 in subfolders Train and Test, and in these subfolders each class has a separate folder (0, 1, etc).
+
+Therefore, one simple way to deploy cnn_shallow.py and cnn_deep.py to your own custom database is to organize
+your database in the same hierarchy as MNIST and CIFAR10 in this project, and modify the variable
+"path" on the .py routines to point to your dataset. Notice that your dataset doesn't have to
+have 10 classes; however, all images in the provided sample datasets are grayscale and have size 28x28,
+hence non-trivial modifications to the code should be performed in order to deal with other types of images.
