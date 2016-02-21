@@ -3,9 +3,12 @@ import numpy as np
 import tensorflow as tf
 import random
 
+# --------------------------------------------------
+# setup
+
 ntrain = 1000 # per class
 ntest = 100 # per class
-nclass = 2 # number of classes
+nclass = 10 # number of classes
 vsize = 784 # vector size
 batchsize = 10
 
@@ -18,7 +21,7 @@ itrain = -1
 itest = -1
 for iclass in range(0, nclass):
     for isample in range(0, ntrain):
-        path = 'MNIST/Train/%d/Image%05d.png' % (iclass,isample)
+        path = '/Users/Cicconet/MacDev/TensorFlow/MNIST/Train/%d/Image%05d.png' % (iclass,isample)
         im = misc.imread(path); # 28 by 28
         im = im.astype(float)/255
         im = np.reshape(im,(1,-1)) # 1 by vsize
@@ -26,7 +29,7 @@ for iclass in range(0, nclass):
         Train[itrain,:] = im
         LTrain[itrain,iclass] = 1 # 1-hot lable
     for isample in range(0, ntest):
-        path = 'MNIST/Test/%d/Image%05d.png' % (iclass,isample)
+        path = '/Users/Cicconet/MacDev/TensorFlow/MNIST/Test/%d/Image%05d.png' % (iclass,isample)
         im = misc.imread(path); # 28 by 28
         im = im.astype(float)/255
         im = np.reshape(im,(1,-1)) # 1 by vsize
@@ -34,21 +37,30 @@ for iclass in range(0, nclass):
         Test[itest,:] = im
         LTest[itest,iclass] = 1 # 1-hot lable
 
-x = tf.placeholder(tf.float32, [None, vsize])
+tf_data = tf.placeholder(tf.float32, [None, vsize])
+tf_labels = tf.placeholder(tf.float32, [None, nclass])
+
+# --------------------------------------------------
+# model
 
 W = tf.Variable(tf.zeros([vsize, nclass]))
 b = tf.Variable(tf.zeros([nclass]))
 
-y = tf.nn.softmax(tf.matmul(x, W) + b)
+forward = tf.nn.softmax(tf.matmul(tf_data, W) + b)
 
-y_ = tf.placeholder(tf.float32, [None, nclass])
+# --------------------------------------------------
+# loss
 
-cross_entropy = -tf.reduce_sum(y_*tf.log(y))
+cross_entropy = -tf.reduce_sum(tf_labels*tf.log(forward))
+optimizer = tf.train.GradientDescentOptimizer(0.01).minimize(cross_entropy)
 
-train_step = tf.train.GradientDescentOptimizer(0.01).minimize(cross_entropy)
+evaluation = tf.equal(tf.argmax(forward,1), tf.argmax(tf_labels,1))
+accuracy = tf.reduce_mean(tf.cast(evaluation, "float"))
+
+# --------------------------------------------------
+# optimization
 
 init = tf.initialize_all_variables()
-
 sess = tf.Session()
 sess.run(init)
 
@@ -61,10 +73,9 @@ for i in range(1000):
     for j in range(batchsize):
         batch_xs[j,:] = Train[perm[j],:]
         batch_ys[j,:] = LTrain[perm[j],:]
-    sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})
+    sess.run(optimizer, feed_dict={tf_data: batch_xs, tf_labels: batch_ys})
 
-correct_prediction = tf.equal(tf.argmax(y,1), tf.argmax(y_,1))
+# --------------------------------------------------
+# test
 
-accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
-
-print(sess.run(accuracy, feed_dict={x: Test, y_: LTest}))
+print(sess.run(accuracy, feed_dict={tf_data: Test, tf_labels: LTest}))
