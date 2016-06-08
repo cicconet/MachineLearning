@@ -21,7 +21,7 @@ itrain = -1
 itest = -1
 for iclass in range(0, nclass):
     for isample in range(0, ntrain):
-        path = '/Users/Cicconet/MacDev/TensorFlow/MNIST/Train/%d/Image%05d.png' % (iclass,isample)
+        path = 'MNIST/Train/%d/Image%05d.png' % (iclass,isample)
         im = misc.imread(path); # 28 by 28
         im = im.astype(float)/255
         im = np.reshape(im,(1,-1)) # 1 by vsize
@@ -29,7 +29,7 @@ for iclass in range(0, nclass):
         Train[itrain,:] = im
         LTrain[itrain,iclass] = 1 # 1-hot lable
     for isample in range(0, ntest):
-        path = '/Users/Cicconet/MacDev/TensorFlow/MNIST/Test/%d/Image%05d.png' % (iclass,isample)
+        path = 'MNIST/Test/%d/Image%05d.png' % (iclass,isample)
         im = misc.imread(path); # 28 by 28
         im = im.astype(float)/255
         im = np.reshape(im,(1,-1)) # 1 by vsize
