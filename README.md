@@ -3,7 +3,7 @@
 Files: nn_shallow.py, nn_deep.py, cnn_deep.py.
 
 Folders: CIFAR10, MNIST, Cells.
-Subsets of the CIFAR10 (https://www.cs.toronto.edu/~kriz/cifar.html),
+-- subsets of the CIFAR10 (https://www.cs.toronto.edu/~kriz/cifar.html),
 MNIST (http://yann.lecun.com/exdb/mnist/),
 and Mouse Embryo Tracking (http://celltracking.bio.nyu.edu/) databases.
 
