@@ -16,5 +16,5 @@ have 10 classes; however, all images in the provided sample datasets are graysca
 hence non-trivial modifications to the code should be performed in order to deal with other types of images.
 
 Other sources:
-https://www.udacity.com/course/viewer#!/c-ud730 (class on Udacity)
-http://joelgrus.com/2016/05/23/fizz-buzz-in-tensorflow/ (joke/tutorial)
+https://www.udacity.com/course/viewer#!/c-ud730 (class on Udacity);
+http://joelgrus.com/2016/05/23/fizz-buzz-in-tensorflow/ (joke/tutorial).
