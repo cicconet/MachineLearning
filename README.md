@@ -2,7 +2,7 @@
 
 Files: nn_shallow.py, nn_deep.py, cnn_deep.py.
 
-Folders: CIFAR10, MNIST, Cells.
+Folders: CIFAR10, MNIST, Cells
 -- subsets of the CIFAR10 (https://www.cs.toronto.edu/~kriz/cifar.html),
 MNIST (http://yann.lecun.com/exdb/mnist/),
 and Mouse Embryo Tracking (http://celltracking.bio.nyu.edu/) databases.
@@ -17,7 +17,7 @@ The main diference is that the .py files here contain code to read and build
 train/test sets from regular image files, and therefore can be more easily deployed to other databases. 
 
 Notice that the folders are organized
-in subfolders Train and Test, and in these subfolders each class has a separate folder (0, 1, etc).
+in subfolders Train and Test, and in these subfolders each class is in a separate folder (0, 1, etc).
 Therefore, one simple way to deploy {nn_shallow,nn_deep,cnn_deep}.py to your own database is to organize your database in the same hierarchy as MNIST/CIFAR10/Cells in this project, and modify the variable
 "path" on the .py routines to point to your dataset. Notice that your dataset doesn't have to
 have 10 classes; however, all images in the provided sample datasets are grayscale and have size 28x28,
