@@ -104,3 +104,5 @@ for i in range(1000):
 # test
 
 print(sess.run(accuracy, feed_dict={tf_data: Test, tf_labels: LTest}))
+
+sess.close()

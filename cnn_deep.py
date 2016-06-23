@@ -108,3 +108,5 @@ for i in range(1000): # 1000
 # test
 
 print("test accuracy %g"%accuracy.eval(feed_dict={tf_data: Test, tf_labels: LTest, keep_prob: 1.0}))
+
+sess.close()
