@@ -1,0 +1,23 @@
+0.
+import numpy as np
+import tensorflow as tf
+import matplotlib.pyplot as plt
+from scipy import misc
+
+1. intro
+
+2. variables / fit line
+
+3. feeds / minibatch
+
+4. classification
+
+5. dropout
+
+6. image classification / nn
+
+7. image classification / cnn
+
+https://www.tensorflow.org/versions/r0.9/api_docs/python/index.html
+https://www.tensorflow.org/versions/r0.9/how_tos/index.html
+https://github.com/ethereon/caffe-tensorflow

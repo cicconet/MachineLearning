@@ -27,6 +27,8 @@ File nn_plot.py:
 
 Toy example using synthetic 2D data. The goal is to visualize the result of classification.
 
+Folder Tutorial: growing complexity, step-by-step tutorial.
+
 Other sources:
 https://www.udacity.com/course/viewer#!/c-ud730 (class on Udacity);
 http://joelgrus.com/2016/05/23/fizz-buzz-in-tensorflow/ (joke/tutorial).
