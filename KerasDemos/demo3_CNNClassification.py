@@ -49,8 +49,8 @@ if os.path.exists(logDir):
     shutil.rmtree(logDir)
 writer = tf.summary.FileWriter(logDir)
 
-modelDir = '/home/cicconet/Workspace/TFModel/Keras'
-# model.load_weights(modelDir)
+modelPath = '/home/cicconet/Workspace/TFModel/Keras'
+# model.load_weights(modelPath)
 
 tags = ['loss','acc']
 for i in range(1000):
@@ -67,7 +67,7 @@ for i in range(1000):
             writer.add_summary(summary,i)
 
 writer.close()
-model.save_weights(modelDir)
+model.save_weights(modelPath)
 
 x_test, y_test = getBatch()
 

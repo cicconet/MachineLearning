@@ -110,8 +110,8 @@ model.summary()
 # train
 # --------------------------------------------------
 
-modelDir = '/home/cicconet/Workspace/TFModel/Keras'
-# model.load_weights(modelDir)
+modelPath = '/home/cicconet/Workspace/TFModel/Keras'
+# model.load_weights(modelPath)
 
 logDir = '/home/cicconet/Workspace/TFLog/Keras'
 if os.path.exists(logDir):
@@ -139,4 +139,4 @@ for i in range(10):
     skimage.io.imsave('/home/cicconet/Workspace/Scratch/I%05d.png' % i, np.uint8(255*cat1(x[i,:,:,0],y[i,:,:,0])))
 
 writer.close()
-model.save_weights(modelDir)
+model.save_weights(modelPath)

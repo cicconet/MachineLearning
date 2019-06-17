@@ -41,8 +41,8 @@ siam.compile(loss='categorical_crossentropy', # categorical_crossentropy, binary
              metrics=['accuracy'])
 siam.summary()
 
-modelDir = '/home/cicconet/Workspace/TFModel/Keras'
-# siam.load_weights(modelDir)
+modelPath = '/home/cicconet/Workspace/TFModel/Keras'
+# siam.load_weights(modelPath)
 
 logDir = '/home/cicconet/Workspace/TFLog/Keras'
 if os.path.exists(logDir):
@@ -96,7 +96,7 @@ for i in range(1000):
             summary = tf.Summary(value=[tf.Summary.Value(tag=tags[j], simple_value=loss_and_metrics[j])])
             writer.add_summary(summary,i)
 writer.close()
-siam.save_weights(modelDir)
+siam.save_weights(modelPath)
 
 
 a_test, b_test, y_test = getBatch(10)
