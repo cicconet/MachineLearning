@@ -1,9 +1,9 @@
 # TensorFlow 101
 
 Folders: CIFAR10, MNIST, Cells
--- subsets of the CIFAR10 (https://www.cs.toronto.edu/~kriz/cifar.html),
-MNIST (http://yann.lecun.com/exdb/mnist/),
-and Mouse Embryo Tracking (http://celltracking.bio.nyu.edu/) databases.
+-- subsets of the CIFAR10 (https://www.cs.toronto.edu/~kriz/cifar.html [1]),
+MNIST (http://yann.lecun.com/exdb/mnist/ [2]),
+and Mouse Embryo Tracking (http://celltracking.bio.nyu.edu/ [3]) databases.
 
 CIFAR10 and MNIST: 10 classes, 1000 samples/class for training, 100 samples/class for testing.
 
@@ -32,3 +32,10 @@ Folder Tutorial: growing complexity, step-by-step tutorial.
 Other sources:
 https://www.udacity.com/course/viewer#!/c-ud730 (class on Udacity);
 http://joelgrus.com/2016/05/23/fizz-buzz-in-tensorflow/ (joke/tutorial).
+
+[1] Learning Multiple Layers of Features from Tiny Images, Alex Krizhevsky, 2009.
+
+[2] MNIST handwritten digit database. Yann LeCun, Corinna Cortes, and CJ Burges. ATT Labs [Online]. Volume 2, 2010.
+
+[3] Label Free Cell-Tracking and Division Detection Based on 2D Time-Lapse Images For Lineage Analysis of Early Embryo Development.
+Marcelo Cicconet, Michelle Gutwein, Kristin C Gunsalus, and Davi Geiger. Computers in Biology and Medicine, Volume 51, p. 24-34, 1 Aug. 2014.
