@@ -1,4 +1,4 @@
-# TensorFlow 101
+# Machine Learning
 
 Folders: CIFAR10, MNIST, Cells
 -- subsets of the CIFAR10 (https://www.cs.toronto.edu/~kriz/cifar.html [1]),
@@ -28,6 +28,10 @@ File nn_plot.py:
 Toy example using synthetic 2D data. The goal is to visualize the result of classification.
 
 Folder Tutorial: growing complexity, step-by-step tutorial.
+
+&nbsp;  
+
+References:
 
 [1] Learning Multiple Layers of Features from Tiny Images, Alex Krizhevsky, 2009.
 
