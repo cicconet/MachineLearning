@@ -9,9 +9,7 @@ CIFAR10 and MNIST: 10 classes, 1000 samples/class for training, 100 samples/clas
 
 Cells: 4 classes, 500 samples/class for training, 200 samples/class for testing.
 
-Files nn_shallow.py, nn_deep.py, cnn_deep.py:
-
-These Python routines are modified from the
+Files nn_shallow.py, nn_deep.py, cnn_deep.py under TensorFlowDemos: these Python routines are modified from the
 "MNIST For ML Beginners" and "Deep MNIST for Experts" (from https://www.tensorflow.org/versions/0.6.0/tutorials/index.html).
 The main diference is that the .py files here contain code to read and build
 train/test sets from regular image files, and therefore can be more easily deployed to other databases. 
@@ -23,11 +21,11 @@ Therefore, one simple way to deploy {nn_shallow,nn_deep,cnn_deep}.py to your own
 have 10 classes; however, all images in the provided sample datasets are grayscale and have size 28x28,
 hence non-trivial modifications to the code should be performed in order to deal with other types of images.
 
-File nn_plot.py:
+File TensorFlowDemos/nn_plot.py: toy example using synthetic 2D data. The goal is to visualize the result of classification.
 
-Toy example using synthetic 2D data. The goal is to visualize the result of classification.
+Folder TensorFlowTutorial: growing complexity, step-by-step tutorial.
 
-Folder Tutorial: growing complexity, step-by-step tutorial.
+Folder KerasDemos: examples of models built using Keras, e.g. MLP, CNN, Siamese, and U-Net.
 
 &nbsp;  
 
