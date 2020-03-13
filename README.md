@@ -29,10 +29,6 @@ Toy example using synthetic 2D data. The goal is to visualize the result of clas
 
 Folder Tutorial: growing complexity, step-by-step tutorial.
 
-Other sources:
-https://www.udacity.com/course/viewer#!/c-ud730 (class on Udacity);
-http://joelgrus.com/2016/05/23/fizz-buzz-in-tensorflow/ (joke/tutorial).
-
 [1] Learning Multiple Layers of Features from Tiny Images, Alex Krizhevsky, 2009.
 
 [2] MNIST handwritten digit database. Yann LeCun, Corinna Cortes, and CJ Burges. ATT Labs [Online]. Volume 2, 2010.
